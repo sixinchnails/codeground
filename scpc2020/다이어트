@@ -14,10 +14,8 @@ class Solution {
 		for(int test_case = 0; test_case < T; test_case++) {
 			System.out.println("Case #"+(test_case+1));
 			
-			String[] tmp = sc.nextLine().split(" ");
-			int N = Integer.parseInt(tmp[0]);
-			int K = Integer.parseInt(tmp[1]);
-			
+			int K = Stream.of(sc.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray()[1];
+
 			int[] a = Stream.of(sc.nextLine().split(" ")).mapToInt(Integer::parseInt).sorted().toArray();
 			int[] b = Stream.of(sc.nextLine().split(" ")).mapToInt(Integer::parseInt).sorted().toArray();		
 			
